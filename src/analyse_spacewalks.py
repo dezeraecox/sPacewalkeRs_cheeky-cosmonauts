@@ -35,6 +35,19 @@ def parse_Duration(d):
     except:
         return None
 
+        """
+    Convert a duration string in H:MM format to decimal hours.
+
+    Parameters
+    ----------
+    d : str
+        Duration string, e.g. '6:30'
+
+    Returns
+    -------
+    float or None
+        Duration in decimal hours, or None if the string cannot be parsed.
+    """
 df['duration_hrs'] = df['duration'].apply(parse_Duration)
 
 colour_usa = '#e41a1c'
